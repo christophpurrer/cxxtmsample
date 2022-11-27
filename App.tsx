@@ -83,7 +83,10 @@ function App(): JSX.Element {
           </Section>
           <Text style={styles.text}>
               NativeSampleModule.passLargeNumber(...) = {NativeSampleModule.passLargeNumber("9223372036854775807")}
-            </Text>
+          </Text>
+          <Text style={styles.text}>
+              NativeSampleModule.passCustomType(...) = {JSON.stringify(NativeSampleModule.passCustomType({key:"123", enabled:true, time:undefined}))}
+          </Text>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.

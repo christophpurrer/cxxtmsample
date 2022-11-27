@@ -81,6 +81,9 @@ function App(): JSX.Element {
           <Section title="Cxx TurboModule">
             NativeSampleModule.reverseString(...) = {NativeSampleModule.reverseString("the quick brown fox jumps over the lazy dog")}
           </Section>
+          <Text style={styles.text}>
+              NativeSampleModule.passLargeNumber(...) = {NativeSampleModule.passLargeNumber("9223372036854775807")}
+            </Text>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
@@ -114,6 +117,11 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
+  },
+  text: {
+    fontSize: 18,
+    marginTop: 15,
+    paddingHorizontal: 24,
   },
   highlight: {
     fontWeight: '700',

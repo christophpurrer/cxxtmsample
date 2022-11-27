@@ -26,7 +26,6 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import NativeSampleModule from './tm/NativeSampleModule';
 
-
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -79,13 +78,24 @@ function App(): JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Cxx TurboModule">
-            NativeSampleModule.reverseString(...) = {NativeSampleModule.reverseString("the quick brown fox jumps over the lazy dog")}
+            NativeSampleModule.reverseString(...) ={' '}
+            {NativeSampleModule.reverseString(
+              'the quick brown fox jumps over the lazy dog',
+            )}
           </Section>
           <Text style={styles.text}>
-              NativeSampleModule.passLargeNumber(...) = {NativeSampleModule.passLargeNumber("9223372036854775807")}
+            NativeSampleModule.passLargeNumber(...) ={' '}
+            {NativeSampleModule.passLargeNumber('9223372036854775807')}
           </Text>
           <Text style={styles.text}>
-              NativeSampleModule.passCustomType(...) = {JSON.stringify(NativeSampleModule.passCustomType({key:"123", enabled:true, time:undefined}))}
+            NativeSampleModule.passCustomType(...) ={' '}
+            {JSON.stringify(
+              NativeSampleModule.passCustomType({
+                key: '123',
+                enabled: true,
+                time: undefined,
+              }),
+            )}
           </Text>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this

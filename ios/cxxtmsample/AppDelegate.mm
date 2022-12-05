@@ -3,7 +3,7 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/CoreModulesPlugins.h>
 #import <ReactCommon/RCTTurboModuleManager.h>
-#import <TurboModules/NativeSampleModule.h>
+#import <AppTurboModules/NativeSampleModule.h>
 
 @interface AppDelegate () <RCTTurboModuleManagerDelegate> {}
 @end

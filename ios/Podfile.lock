@@ -1,4 +1,13 @@
 PODS:
+  - AppTurboModules (0.0.1):
+    - RCT-Folly (= 2021.07.22.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-RCTFabric
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
@@ -721,20 +730,12 @@ PODS:
     - React-logger (= 0.71.0-rc.2)
     - React-perflogger (= 0.71.0-rc.2)
   - SocketRocket (0.6.0)
-  - TurboModules (0.0.1):
-    - RCT-Folly (= 2021.07.22.00)
-    - RCTRequired
-    - RCTTypeSafety
-    - React-Codegen
-    - React-Core
-    - React-RCTFabric
-    - ReactCommon/turbomodule/bridging
-    - ReactCommon/turbomodule/core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - AppTurboModules (from `./../tm`)
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
@@ -799,7 +800,6 @@ DEPENDENCIES:
   - React-rncore (from `../node_modules/react-native/ReactCommon`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - TurboModules (from `./../tm`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -821,6 +821,8 @@ SPEC REPOS:
     - YogaKit
 
 EXTERNAL SOURCES:
+  AppTurboModules:
+    :path: "./../tm"
   boost:
     :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
   DoubleConversion:
@@ -897,12 +899,11 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
-  TurboModules:
-    :path: "./../tm"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AppTurboModules: a6eec8fd4bc53b323ffa221bd055c7abd5536229
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
@@ -918,11 +919,11 @@ SPEC CHECKSUMS:
   Flipper-RSocket: d9d9ade67cbecf6ac10730304bf5607266dd2541
   FlipperKit: cbdee19bdd4e7f05472a66ce290f1b729ba3cb86
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
-  glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
-  hermes-engine: 3c0b1769ae154b3626e22c7aba656b8722a74cd2
+  glog: 791fe035093b84822da7f0870421a25839ca7870
+  hermes-engine: b1cb06dfc13caa6fe7ac8bf1e2cc7cc24127eebb
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
-  RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
+  RCT-Folly: 85766c3226c7ec638f05ad7cb3cf6a268d6c4241
   RCTRequired: 6a5266f052d88710f1a03487c4e0584c0a1dd5fa
   RCTTypeSafety: 9728fc39a7fdb3ae89e05cf93a72273e949b89a3
   React: 41f781ceac4d692b5f968e9e988703e66b8859e4
@@ -955,10 +956,9 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 3f712141850e2862fe082483e4e64bb2eaedb30d
   ReactCommon: 8ee8c978a0bc6b2e381b12fd1a09599ebdc256ca
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
-  TurboModules: 7d3b99b5d9ed52f70d1578a6c60482a1fb66761c
   Yoga: 0324cb09314332b1f6dc1f59d7671621391122e3
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 0ffd465454db455af475b0d580ddc2457c619121
+PODFILE CHECKSUM: bae946c9a29413d46dd3835e69140dadf4a492a4
 
 COCOAPODS: 1.11.3

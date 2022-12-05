@@ -3,7 +3,7 @@ require "json"
 package = JSON.parse(File.read(File.join(__dir__, "../package.json")))
 
 Pod::Spec.new do |s|
-  s.name            = "TurboModules"
+  s.name            = "AppTurboModules"
   s.version         = package["version"]
   s.summary         = package["description"]
   s.description     = package["description"]
@@ -17,5 +17,4 @@ Pod::Spec.new do |s|
     "CLANG_CXX_LANGUAGE_STANDARD" => "c++17"
   }
   install_modules_dependencies(s)
-  s.dependency "ReactCommon/turbomodule/core"
 end
